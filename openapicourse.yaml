@@ -75,6 +75,35 @@ paths:
       responses:
         '200':
           description: List of Beers
+          content:
+            application/json:
+              schema:
+                type: array
+                description: List of beer object
+                items:
+                  type: object
+                  description: Beer object
+                  properties:
+                    name:
+                      type: string
+                    style:
+                      type: string
+                      enum: [ALE, PALE_ALE, IPA, WHEAT, LAGER]
+                    upc:
+                      type: string
+                    price:
+                      type: number
+                      format: float
+                    quantity:
+                      type: integer
+                      format: int32
+                    brewery:
+                      type: object
+                      properties:
+                        name:
+                          type: string
+                        location:
+                          type: string
         '404':
           description: No Beers Found
 
