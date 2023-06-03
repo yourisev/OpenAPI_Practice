@@ -1,0 +1,42 @@
+openapi: 3.0.2
+info:
+  title: 'OpenAPI Course'
+  description: Specification for OpenAPI Course
+  version: 1.0.0
+  termsOfService: 'http://example.com/terms/'
+  contact:
+    name: Marcel Seuga
+    email: sevgama44@gmail.com
+  license:
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.html'
+servers:
+  - url: 'https://dev.example.com'
+    description: Development Server
+  - url: 'https://qa.example.com'
+    description: Question and Answer
+  - url: 'https://prod.example.com'
+    description: Production Server
+paths:
+  /v1/customers:
+    get:
+      responses:
+        '200':
+          description: List of customers
+          content:
+            application/json:
+              schema:
+                type: array
+                items: string
+                description: Customer Name
+                minLength: 2
+                maxLength: 100
+  /v1/beers:
+    get:
+      responses:
+        '200':
+          description: List of Beers
+        '404':
+          description: No Beers Found
+
+
+  
