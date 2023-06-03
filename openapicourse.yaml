@@ -55,6 +55,18 @@ paths:
                         city:
                           type: string
                           example: Greer
+                        stateCode:
+                          type: string
+                          minLength: 2
+                          maxLength: 2
+                          description: 2 Letter State Code
+                          # enum: [AL, AK, AZ, AR, CA]
+                          enum:
+                            -AL
+                            -AK
+                            -AZ
+                            -AR
+                            -CA
                         zipCode:
                           type: string
                           example: 30005
