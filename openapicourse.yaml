@@ -154,6 +154,7 @@ components:
         id:
           type: string
           format: uuid
+          readOnly: true
         firstName:
           type: string
           minLength: 2
